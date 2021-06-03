@@ -1,0 +1,85 @@
+body {
+    background: url("../img/devushka-ulica-moda-tatu.jpg") ;
+    background-size: 100%;
+    color: aliceblue;
+    background-attachment: fixed;
+}
+.registration a {
+    font-size: 20px;
+    color: aliceblue;
+}
+.registration li {
+    background: #442c2b;
+    margin: 10px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+aside {
+    float: left;
+    width: 20%;
+    padding: 2.5%;
+    height: 100vh;
+    color: aliceblue;
+    border-right: 5px solid #47545f ;
+    background: #baa5a5;
+}
+aside img {
+    width: 220px;
+    float: left;
+    border-radius: 30%;
+}
+aside .logo {
+    font-size: 40px;
+}
+aside h3 {
+    margin-top: 250px;
+    font-size: 42px;
+    color: aliceblue;
+}
+aside ul {
+    list-style: none;
+}
+aside ul li {
+    margin-left: -35px;
+    font-size: 25px;
+    color: gainsboro;
+    display: block;
+    margin-top: 20px;
+    transition: all .2s ease;
+}
+aside ul li:hover, aside ul a {
+    color: blueviolet;
+    text-decoration: none;
+    transform: scale(1.20);
+}
+main .features {
+    float: left;
+    margin-top: 50px;
+    text-align: center;
+    width: 75%;
+
+}
+main .features h1 {font-size: 50px}
+main .features p {max-width: 400px; margin: 20px auto}
+
+form {
+    margin-left: 32%;
+    width: 500px;
+    margin-top: 30px;
+}
+
+.create_title {
+    width: 500px;
+    margin-left: 32%;
+    padding-bottom: 10px;
+    color: aliceblue;
+    border: lightskyblue solid 13px;
+    border-radius: 30%;
+}
+
+.form-label {
+    display: inline-block;
+    min-width: 150px;
+    vertical-align: top;
+}

@@ -1,0 +1,39 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}?v={{ get_timestamp }}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+</head>
+<body>
+    <aside>
+        <a href="{% url 'home'%}"><img src="{% static 'main/img/158153116_762318901331800_433773523949091070_n.jpg'%}" alt="logo"></a>
+        <h3>Навигация</h3>
+        <ul>
+            <a href="{% url 'home'%}"><li><i class="fas fa-place-of-worship"></i> Главная</li></a>
+            <a href="{% url 'about'%}"><li><i class="fas fa-users"></i> Про Нас</li></a>
+            <a href="{% url 'news_home'%}"><li><i class="far fa-newspaper"></i> Новости</li></a>
+            <a href="#"><li><i class="fas fa-phone-volume"></i> Контакты</li></a>
+            <a href="{% url 'create'%}"><li><button  class="btn btn-danger" ><i class="fas fa-plus-circle"></i> Добавить новость</button></li></a>
+        </ul>
+    </aside>
+    <div>
+        <ul class="nav justify-content-end registration">
+          {% if request.user.is_authenticated %}
+            <li class="last"> {{user.username}} | <a href="{% url 'logout' %}">Выйти</a></li>
+            {% else %}
+            <li class="last"><a href="{% url 'register' %}">Регистрация</a> | <a href="{% url 'login' %}">Войти</a></li>
+            {% endif %}
+        </ul>
+    </div>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>
